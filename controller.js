@@ -2,12 +2,9 @@ angular.module('Projeto01').controller('ListController', function($scope){
 
     $scope.Enter = function Enter(event) {
 
-        if (event.keycode = 13) {
+        if (event.keycode == 13) {
 
             console.log(5555);
-        }
-        else {
-            return;
         }
 
     }
