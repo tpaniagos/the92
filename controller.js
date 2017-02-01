@@ -1,10 +1,13 @@
 angular.module('Projeto01').controller('ListController', function($scope){
 
+    var list = { description : "" };
     $scope.Enter = function Enter(event) {
 
-        if (event.keycode == 13) {
+        if (event.keyCode == 13) {
 
-            console.log(5555);
+            $scope.description = $scope.descricao;
+            console.log($scope.descricao);
+            document.getElementById('afazeres').value='';
         }
 
     }

@@ -13,13 +13,11 @@
 <div ng-controller='ListController'><!-- declaracao do controller ListController na div -->
     <form name="tarefas">
 
-        <input type="text" ng-model="descricao" ng-keypress="Enter($event)" name="descricao">
+        <input type="text" ng-model="descricao" ng-keypress="Enter($event)" id = "afazeres">
         <!-- ng-model grava a variavel digitada na variavel descricao -->
-        {{descricao}}
-        <tr ng-repeat=" d in descricao">
-
-
-        </tr>
+        <p></p>
+        {{descricao}}<p></p>
+        <div ng-show = ""></div>
     </form>
 </div>
 
