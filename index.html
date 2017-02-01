@@ -5,16 +5,18 @@
     <title>Projeto01</title>
 </head>
 <body ng-app = "Projeto01"><!-- assossiação do angular com o projeto etapa 01 -->
-<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" > </script><!-- assossiação do angular com o projeto etapa 02 -->
-<script src = js/app.js > </script><!-- vincula o html com o script app.js -->
-<script src = js/controller.js > </script><!-- vincula o html com o script controller.js -->
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" ></script>
+<!-- assossiação do angular com o projeto etapa 02 -->
+<script src = js/app.js></script><!-- vincula o html com o script app.js -->
+<script src = js/controller.js></script><!-- vincula o html com o script controller.js -->
 
-<div ng-controller = 'ListController'><!-- declaracao do controller ListController na div -->
-    <form action = "" name = "tarefas">
+<div ng-controller='ListController'><!-- declaracao do controller ListController na div -->
+    <form name="tarefas">
 
-        <input type = "text" ng-model = "descricao" ng-keypress = "Enter(event)" name = "descricao" ><!-- ng-model grava a variavel digitada na variavel descricao -->
+        <input type="text" ng-model="descricao" ng-keypress="Enter($event)" name="descricao">
+        <!-- ng-model grava a variavel digitada na variavel descricao -->
         {{descricao}}
-        <tr ng-repeat = " d in descricao">
+        <tr ng-repeat=" d in descricao">
 
 
         </tr>
