@@ -1,14 +1,30 @@
-angular.module('Projeto01').controller('ListController', function($scope){
+angular.module('Projeto01').controller('ListController', function ($scope) {
 
-    var list = { description : "" };
-    $scope.Enter = function Enter(event) {
+    var list = [];
 
-        if (event.keyCode == 13) {
+    $scope.addDescricao = function addDescricao() {
 
-            $scope.description = $scope.descricao;
-            console.log($scope.descricao);
-            document.getElementById('afazeres').value='';
+        list.push($scope.descricao);
+        console.log($scope.descricao);
+        console.log(list);
+        $scope.descricao = "";
+
+        /*
+        MANEIRA IDIOTA
+        document.getElementById("IDList").innerHTML = list;
+        */
+
+        /*
+        var text, LLen, i;
+        LLen = list.length;
+        text = "<ul>";
+        for (i = 0; i < LLen; i++) {
+            text += "<li>" + list[i] + "</li>";
         }
+        text += "</ul>";
+        document.getElementById("IDList").innerHTML = text;
+        MANEIRA FULL JAVASCRIPT
+        */
 
     }
 });
