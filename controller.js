@@ -1,32 +1,33 @@
 angular.module('Projeto01').controller('ListController', function ($scope) {
 
-    var list = [];
+    $scope.list = [];
 
     $scope.addDescricao = function addDescricao() {
 
-        list.push($scope.descricao);
-        console.log($scope.descricao);
-        console.log(list);
+        $scope.list.push($scope.descricao);
         $scope.descricao = "";
-
-        /*
-        MANEIRA IDIOTA
-        document.getElementById("IDList").innerHTML = list;
-        */
-
-        /*
-        var text, LLen, i;
-        LLen = list.length;
-        text = "<ul>";
-        for (i = 0; i < LLen; i++) {
-            text += "<li>" + list[i] + "</li>";
-        }
-        text += "</ul>";
-        document.getElementById("IDList").innerHTML = text;
-        MANEIRA FULL JAVASCRIPT
-        */
 
     }
 });
+
+angular.module('Projeto01').controller('DeleteController', function ($scope) {
+
+
+    $scope.deleteDescricao = function deleteDescricao() {
+        if ($scope.checkedbox = true) {
+            delete $scope.descricao;
+        }
+    }
+
+});
+
+angular.module('Projeto01').controller('EditController', function ($scope) {
+
+    $scope.editDescricao = function editDescricao() {
+
+
+    }
+
+})
 //criacao do controller etapa 01
 //vinculacao do modulo com controller etapa 02
