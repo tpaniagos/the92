@@ -19,17 +19,17 @@
 <div ng-controller="ListController"><!-- declaracao do controller ListController na div -->
     <form ng-submit="addDescricao()">
 
-        <input type="checkbox" ng-model="checkedAll" ng-click="selectAllDescricao">
+        <input type="checkbox" ng-model="status" ng-model="allCheck">
         <input type="text" ng-model="descricao">
-        <!-- ng-model grava a variavel digitada na variavel descricao -->
 
-        <p>Lista de afazeres:</p>
-            <u ng-controller="EditController">
-                <li ng-repeat="l in list">
-        <p ng-dblclick="editDescricao()"><input type="checkbox" ng-checked="checkedAll">{{l}}</p>
-        </li>
+        <u ng-show="list.length">
+            <p>Lista de afazeres:</p>
+            <li ng-repeat="x in list">
+                <input type="checkbox" ng-checked="allCheck">{{x.name}}{{x.boolean}}
+            </li>
+            <button ng-click="excluirDescricao()">Limpar</button>
         </u>
-    <input type="button" ng-click="deleteDescricao" value="Limpar">
+
     </form>
 </div>
 
